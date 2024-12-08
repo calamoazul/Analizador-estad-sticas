@@ -3,6 +3,7 @@ import json
 import matplotlib.pyplot as plt
 from classes import *
 import numpy as np
+import os
 """ Función para leer los datos del excel """
 
 def read_data_csv():
@@ -48,7 +49,7 @@ def create_graphics(values, labels, title):
         reset()
 
 def reset():
-    input('Pulsa cualquier tecla para continuar')
+    input('Pulsa intro para continuar')
 
 def organized_data(key, second_key, data,):
     values = Quest(key)
@@ -157,3 +158,15 @@ def select_options(option, data):
         reset()
     else: 
         return False
+    
+"""Función para limpiar la consola según el sistema operativo"""
+def clear_console():
+    name_system = os.uname().sysname
+
+    if(name_system == 'Linux'):
+        os.system('clear')
+    elif(name_system == 'MacOs'):
+        os.system('clear')
+    elif(name_system == 'Windows'):
+        os.system('cls')
+    

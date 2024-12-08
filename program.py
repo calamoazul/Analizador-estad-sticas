@@ -2,8 +2,9 @@ import os
 from functions import *
 from classes import *
 
+
 while True:
-    os.system('cls')
+    clear_console()
     print('Aplicación para ver gráficos sobre la pandemia del Covid')
     print('¿Qué gráfica quieres visualizar')
     print('1. Defunciones')
